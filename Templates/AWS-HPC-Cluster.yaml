@@ -474,6 +474,7 @@ CustomADPassword:
             - echo LC_ALL=en_US.UTF-8 >> /etc/environment
             - cd /home/ec2-user/environment
             - git clone "https://github.com/swajahataziz/1click-hpc-oct21.git" # revert this back to the original repo when issues are resolved.
+            - mv 1click-hpc-oct21 1click-hpc
             - !Sub echo "export AWS_DEFAULT_REGION=${AWS::Region}" >> cluster_env
             - !Sub echo "export AWS_REGION_NAME=${AWS::Region}" >> cluster_env
             - !Sub echo "export S3_BUCKET=${Cloud9OutputBucket}" >> cluster_env
