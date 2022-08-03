@@ -447,6 +447,13 @@ Resources:
       Description: This the password used for RDS and ec2-user
       SecretString: !Ref AdminPassword
 
+CustomADPassword:
+    Type: 'AWS::SecretsManager::Secret'
+    Properties:
+      Name: !Sub 'hpc-1click-${AWS::StackName}-AD'
+      Description: This the password used for Admin of the custom AD directory
+      SecretString: !Ref AdminPassword
+
   Cloud9SSMDocument: 
     Type: AWS::SSM::Document
     Properties: 
